@@ -1,5 +1,5 @@
-import RiotLogo from "./RiotLogo";
-import ValorantLogo from "./ValorantLogo";
+import RiotLogo from './RiotLogo'
+import ValorantLogo from './ValorantLogo'
 const Header = () => {
   return (
     <header className="bg-black flex items-center p-3">
@@ -38,7 +38,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
