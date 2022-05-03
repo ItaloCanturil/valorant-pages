@@ -1,20 +1,28 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 interface Ability {
-  name: string;
-  image: string;
+  name: string
+  image: string
 }
 
 interface PlayerProps {
-  name: string;
-  image: string;
-  abilities: Array<Ability>;
+  name: string
+  images: string
+  abilities: Array<Ability>
 }
 
-const Player = ({ name, image, abilities }: PlayerProps) => {
+const Player = ({ name, images, abilities }: PlayerProps) => {
   return (
-    <>
-      <Image src={image} alt="" layout="responsive" />
+    <div className="bg-gray-900 w-80">
+      <h1 className="font-hero rotate-90 w-3 text-6xl">{name}</h1>
+      <Image
+        className="relative"
+        src={images}
+        alt=""
+        layout="responsive"
+        width="352"
+        height="592"
+      />
       <div className="flex items-center justify-around p-3">
         {abilities.map((item, index) => (
           <Image
@@ -26,8 +34,8 @@ const Player = ({ name, image, abilities }: PlayerProps) => {
           />
         ))}
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default Player;
+export default Player
