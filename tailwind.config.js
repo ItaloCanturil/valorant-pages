@@ -4,7 +4,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        card: '#1F2326',
+        tail: '#FF4656'
+      }
+    },
     fontFamily: {
       hero: ['Druk Wide']
     }
